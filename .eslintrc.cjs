@@ -10,9 +10,13 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
+    'import/prefer-default-export': 'off',
+    'import/extensions': 'off',
+    'import/no-extraneous-dependencies': 'off',
     'no-restricted-syntax': 'off',
     'no-plusplus': 'off',
     'no-console': 'off',
+    'no-continue': 'off',
     'prettier/prettier': [
       'error',
       {

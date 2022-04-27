@@ -56,3 +56,10 @@ Most part of my day I was developing that project focused on the course. I revis
 - Use the terminal to create pipelines;
 
 - and more...
+
+## Day 03 - Manual HTTP Router Handler
+
+A while ago I made a test. This test involved handling a few http routes and methods manually, without using a framework like express.
+I failed this test back then, because I never worked with this module directly. I made hundreds of REST APIs before, but all of them used express.
+
+The project from today helped me understand better how this module work and how can I handle all this stuff internally.
