@@ -17,6 +17,7 @@ module.exports = {
     'no-plusplus': 'off',
     'no-console': 'off',
     'no-continue': 'off',
+    'no-param-reassign': 'off',
     'prettier/prettier': [
       'error',
       {

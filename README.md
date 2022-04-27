@@ -63,3 +63,23 @@ A while ago I made a test. This test involved handling a few http routes and met
 I failed this test back then, because I never worked with this module directly. I made hundreds of REST APIs before, but all of them used express.
 
 The project from today helped me understand better how this module work and how can I handle all this stuff internally.
+
+## Day 04 - Terminal Socket Stream
+
+Since I'm into learning iterators and generators, it is time to start doing something with streams.
+Today I created a very (very) simple application which just creates a net.socket server in a terminal and receives messages (streams) from other terminals.
+The server uses a pipeline to send data from the socket to process.stdout, while the client uses a pipeline to send data from process.stdin to socket.
+From this I started understanding a little bit how to:
+
+- create a socket connection using the native node:net module
+- listen to a socket using the native node:net module
+- pipe information from the socket to the terminal
+- pipe information from the terminal to the socket
+- pipe information from the socket to a file stream
+
+I also understood that:
+
+- I can't use the same pipeline to send data for two different writable streams
+- which means that, after I send the chunk to a writable stream, I can't have other item coming after this stream on the pipeline
+
+I'm also getting used to JS Doc, it is very simple and can help a lot when you're trying to learn and don't want to use TypeScript.
