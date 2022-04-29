@@ -107,3 +107,13 @@ Some things I understood by doing this:
 - How to use the appendFile function from `node:fs`
 
 - I normally don't use the class syntax too much, but I'm getting used to it. Maybe I'll use it more in the future. Get rid of the "only functional paradigm" way of thinking.
+
+## Day 06 - Proxy Handler native tests
+
+The idea today was to study a little bit of other testing libraries. I'm very used to jest, so I want to avoid it and learn other common used libraries like `chai`, `mocha` and `sinon`.
+
+- Starting to understand the differences between mocks, spies, stubs and fakes. In jest, everything is a mock or a spy, so the keywords stubs and fakes are new to me.
+
+- Read a little bit of the documentation of `sinon` and `chai` to understand how to use them.
+
+That's pretty much it for today. I'm going to continue looking at it tomorrow and implement more tests.
