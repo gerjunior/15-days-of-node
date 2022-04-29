@@ -1,0 +1,3 @@
+------LOG START------
+[GET:START]: Table: users - Id: john@email.com on 2022-04-29T00:58:37.354Z
+[GET:FINISH]: Table: users - Id: john@email.com on 2022-04-29T00:58:37.404Z
