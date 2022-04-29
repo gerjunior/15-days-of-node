@@ -83,3 +83,27 @@ I also understood that:
 - which means that, after I send the chunk to a writable stream, I can't have other item coming after this stream on the pipeline
 
 I'm also getting used to JS Doc, it is very simple and can help a lot when you're trying to learn and don't want to use TypeScript.
+
+## Day 05 - Proxy Handler
+
+I started studying the Proxy object and understanding its behavior. To fix that knowledge on my head, I implemented a simple mock database model which produces a log each time you get a data.
+For example: as soon as I use `getData('users', 'john@email.com')`, I'll get a log like this:
+
+```log
+[GET:START]: Table: users - Id: john@email.com on 2022-04-29T12:46:24.593Z
+[GET:FINISH]: Table: users - Id: john@email.com on 2022-04-29T12:46:24.769Z
+```
+
+The log is outputted to a file called `output.log`.
+
+Some things I understood by doing this:
+
+- From node >= v17.5, there is a new syntax for importing files that uses the `assert` keyword. With this keyword, I'm able to specify that I'm importing a JSON file, and the language will take care of making it readable.
+
+- It is easy to spy (create  a proxy) a simple object, but spying a Map is a little more complex.
+
+- With the Proxy object, I can create a handler for each Object prototype method that I want to intercept (`has`, `), including getting and setting a prop.
+
+- How to use the appendFile function from `node:fs`
+
+- I normally don't use the class syntax too much, but I'm getting used to it. Maybe I'll use it more in the future. Get rid of the "only functional paradigm" way of thinking.
