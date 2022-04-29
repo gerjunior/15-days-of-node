@@ -11,6 +11,7 @@ module.exports = {
   },
   rules: {
     'import/prefer-default-export': 'off',
+    'no-underscore-dangle': 'off',
     'import/extensions': 'off',
     'import/no-extraneous-dependencies': 'off',
     'no-restricted-syntax': 'off',

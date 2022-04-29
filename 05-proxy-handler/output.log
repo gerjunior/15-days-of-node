@@ -1,3 +1,9 @@
 ------LOG START------
-[GET:START]: Table: users - Id: john@email.com on 2022-04-29T00:58:37.354Z
-[GET:FINISH]: Table: users - Id: john@email.com on 2022-04-29T00:58:37.404Z
+[GET:START]: Table: users - Id: john@email.com on 2022-04-29T12:46:24.593Z
+[GET:FINISH]: Table: users - Id: john@email.com on 2022-04-29T12:46:24.769Z
+[GET:START]: Table: users - Id: jane@gmail.com on 2022-04-29T12:46:24.796Z
+[GET:FINISH]: Table: users - Id: jane@gmail.com on 2022-04-29T12:46:25.519Z
+[GET:START]: Table: users - Id: mark@gmail.com on 2022-04-29T12:46:25.536Z
+[GET:FINISH]: Table: users - Id: mark@gmail.com on 2022-04-29T12:46:25.967Z
+[GET:START]: Table: users - Id: jones@gmail.com on 2022-04-29T12:46:25.986Z
+[GET:FINISH]: Table: users - Id: jones@gmail.com on 2022-04-29T12:46:26.430Z

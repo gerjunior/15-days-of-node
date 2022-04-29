@@ -4,10 +4,6 @@ import TableGenerator from './tableGenerator.js'
 const tableGenerator = new TableGenerator()
 tableGenerator.createTable('users')
 
-// const data = await tableGenerator.getData('users', 'john@email.com')
-
-// console.log(data)
-
 http
   .createServer(async (request, response) => {
     const urlPaths = request.url.split('/')

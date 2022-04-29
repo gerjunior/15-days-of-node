@@ -38,4 +38,8 @@ export default class LogEmitter {
       console.error('error writing to file', err)
     }
   }
+
+  getInstance() {
+    return this.log
+  }
 }

@@ -8,17 +8,17 @@ import defaultData from './users.json' assert { type: 'json' };
 export default class TableGenerator {
   constructor() {
     this.tables = {}
-    this._log = new LogEmitter().log
+    this.log = new LogEmitter().getInstance()
   }
 
   createTable(tableName) {
     const table = new Proxy(defaultData, {
       get: async (target, prop) => {
-        this._log.emit('startGetData', { tableName, id: prop })
+        this.log.emit('startGetData', { tableName, id: prop })
         const data = target[prop]
 
         await setTimeout(Math.random() * 1000)
-        this._log.emit('finishGetData', { tableName, id: prop })
+        this.log.emit('finishGetData', { tableName, id: prop })
 
         return data
       },
