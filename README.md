@@ -118,7 +118,7 @@ The idea today was to study a little bit of other testing libraries. I'm very us
 
 That's pretty much it for today. I'm going to continue looking at it tomorrow and implement more tests.
 
-## Day 07
+## Day 07 - Router Handler tests
 
 - [Before start]: The first time I tried to build the project from the third day where I made the Manual Http Route Handler project, my approach was a little bit different. I tried to make a TDD-like approach using Jest, but since I'm using nodeJS v18 and ESModules (which I think were the problem), I got into a lot of problems and just gave up doing it that way. On day 04, my idea was also to make tests for the project of the previous day, but I also couldn't make it work, so I moved on. Since now I'm learning how to use other testing libraries like `chai`, `mocha` and `sinon`, I'm going to try to implement in that project and see if I can make it work this time.
 
