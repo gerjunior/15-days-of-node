@@ -117,3 +117,29 @@ The idea today was to study a little bit of other testing libraries. I'm very us
 - Read a little bit of the documentation of `sinon` and `chai` to understand how to use them.
 
 That's pretty much it for today. I'm going to continue looking at it tomorrow and implement more tests.
+
+## Day 07
+
+- [Before start]: The first time I tried to build the project from the third day where I made the Manual Http Route Handler project, my approach was a little bit different. I tried to make a TDD-like approach using Jest, but since I'm using nodeJS v18 and ESModules (which I think were the problem), I got into a lot of problems and just gave up doing it that way. On day 04, my idea was also to make tests for the project of the previous day, but I also couldn't make it work, so I moved on. Since now I'm learning how to use other testing libraries like `chai`, `mocha` and `sinon`, I'm going to try to implement in that project and see if I can make it work this time.
+
+Let's start with:
+
+- ~~I wanted to stop copying and pasting the projects from other days into the new day project, so I tried something different. I remembered how yarn and npm do a symbolic link to the package.json file, which makes it easier to reference packages that you're developing locally. I did a quick search and found the `ln` command, which works like a charm on MacOS. It does basically the same thing, creating a symbolic link to a folder or a file. I simply did `ln -s ../03-manual-http-router-handler/ ./manual-http-router-handler-link` and now I can reference the project without having to do one more `../` and removing the necessity of the copy and paste.~~
+
+- ~~The above solution didn't worked as I expected, because the OS symlinks are not recognized by nodejs. I modified the day 3 package and ran `npm link` on it. I am able to reference it on the day 7 project now. Fail, but at least I learned something!~~
+
+- ~~Mocking ES Modules is not easy. It can involve rewriting the imports of each module inside a single object, use the class syntax or do DI. I don't want to modify more the project of another day, so I'm going to try to use a third party library called [rewire](npmjs.com/package/rewire) and see if it does it works.~~
+
+- After hours of trying to stub an object, I gave up and turned the `routes` object into a `getRoutes` function, which I was able to create stubs and spies easily.  
+
+- Also decided to copy the project from day 03 to avoid making changes on its respective folder since I had to modify some stuff
+
+- I also had the move the `errorHandlers` object to a separate file, and also changed it to use a function syntax.
+
+Today I learned that:
+
+- I still think there is a way to mock constant object, but I still have to figure out how. I know that `rewire` library might be able to help me on this.
+
+- Mocking ES Modules without babel or a helper library is a pain in the ass. I hope there is a way to do that, but for now I'm going to stick with @babel/register to make my life easier.
+
+- Unless the exports are all declared inside a single object, the best choice is to be able to create stubs is to have them in a separate file.
