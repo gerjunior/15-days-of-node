@@ -138,8 +138,8 @@ Let's start with:
 
 Today I learned that:
 
-- I still think there is a way to mock constant object, but I still have to figure out how. I know that `rewire` library might be able to help me on this.
+- I still think there is a way to mock a constant object, but I still have to figure out how. I know that the `rewire` library might be able to help me on this.
 
 - Mocking ES Modules without babel or a helper library is a pain in the ass. I hope there is a way to do that, but for now I'm going to stick with @babel/register to make my life easier.
 
-- Unless the exports are all declared inside a single object, the best choice is to be able to create stubs is to have them in a separate file.
+- Unless the exports are all declared inside a single object, the best way to create stubs is to have them in a separate file.
