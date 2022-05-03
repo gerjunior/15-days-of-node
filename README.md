@@ -143,3 +143,33 @@ Today I learned that:
 - Mocking ES Modules without babel or a helper library is a pain in the ass. I hope there is a way to do that, but for now I'm going to stick with @babel/register to make my life easier.
 
 - Unless the exports are all declared inside a single object, the best way to create stubs is to have them in a separate file.
+
+## Day 8 - NodeJS Terminal: REPL, Google ZX
+
+Today I focused on understanding a little bit how the REPL (Read Eval Print Loop) from nodejs works. I've heard this term before, and also used it before, but didn't know it had this name. It is basically a way to interact with the nodejs runtime, and it's very useful to debug and test your code.
+
+- I got the following commands:
+
+  ```sh
+    node inspect file.js // starts the REPL and inspects the file.js
+    list(100) // list the first 100 lines of the inspected file
+    setBreakpoint(5) OR sb(5) // set a breakpoint on line 5
+    clearBreakpoint('file.js', 5) OR cb('file.js', 5) // remove the breakpoint on line 5 of file.js
+    cont // continue execution until the next breakpoint
+    .save debug.log // save all commands to the debug.log file
+    exec {} // execute the code in the REPL
+    repl // execute repl and removes the necessity of having to type the `exec` prefix
+  ```
+
+  - Inside the repl, I can:
+    - Print variables
+    - Execute expressions
+    - Do everything the nodejs REPL does (actually, you open the REPL when you type `node`. It is almost the same thing from the browser console)
+
+  - So, when a breakpoint is hit, I can visualize everything that is inside the context (variables, functions, etc) of the file.
+
+- After that, I also installed Google ZX, which uses the `$` prefix to execute shell commands. For simple scrips, this avoid the necessity of having to use `child_process` for executing commands.
+
+- I understood a little bit how to use groups in regex, which I found interesting. Probably gonna get deep on this in the next days.
+
+Tomorrow I'll continue to work a little bit with nodeJS terminal.
