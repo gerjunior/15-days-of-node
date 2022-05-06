@@ -1,0 +1,27 @@
+{
+  "name": "09-regex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "type": "module",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "node .",
+    "test": "npx mocha -w --parallel test/*.test.js",
+    "test:cov": "npx nyc npm run test"
+  },
+  "keywords": [],
+  "author": "gerjunior",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0",
+    "nyc": "^15.1.0"
+  },
+  "dependencies": {
+    "pdf-parse": "^1.1.1",
+    "safe-regex": "^2.1.1"
+  }
+}

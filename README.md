@@ -173,3 +173,9 @@ Today I focused on understanding a little bit how the REPL (Read Eval Print Loop
 - I understood a little bit how to use groups in regex, which I found interesting. Probably gonna get deep on this in the next days.
 
 Tomorrow I'll continue to work a little bit with nodeJS terminal.
+
+## Day 9 - RegEx
+
+Actually this could be day 8 and 9. It is a little bit hard to make one project at a workday, so I had to take a little bit more time on it.
+
+Since those expressions are a little bit more complex, the readme on the project folder will be more descriptive than this comment.
