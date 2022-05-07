@@ -179,3 +179,23 @@ Tomorrow I'll continue to work a little bit with nodeJS terminal.
 Actually this could be day 8 and 9. It is a little bit hard to make one project at a workday, so I had to take a little bit more time on it.
 
 Since those expressions are a little bit more complex, the readme on the project folder will be more descriptive than this comment.
+
+## Day 10 - Training RegExp
+
+One more day practicing RegEx. Actually, I've been doing it for more days than I'm showing here. I'm getting really good at it. I found some interesting stuff while making some challenges on HackerHank to practice:
+
+- For the `Find a Word` exercise, I needed to create an expression that would help me to find how many times a word was repeated in multiple strings. For that, I needed to use template literals to dynamically insert a string inside the expression. The thing that made me stuck was that the word boundary `/b` operator was disappearing from the mounted expression, and since I was using the HackerHank IDE, I didn't notice that `\b` was a special character, just line `\n`. When I realized that, I came upon the `String.raw` tag function, which avoids the need of escaping the special characters.
+
+- regExp `exec` method is stateful, which means that the next time you run the same regExp it will not return the same result from before. To avoid this behavior, you can reset the `lastIndex` property of the RegExp object to `0`. In the `phoneNumber.js` file I made a Proxy object that will reset the `lastIndex` property of the RegExp object every time it is called.
+
+- On the `String.prototype.replace` function, you can use `$n` to replace the nth match of the expression. For example, if you want to replace the first match of the expression, you can use `$1`. If you want to replace the second match, you can use `$2`. If you want to replace using the whole expression, you can use `$&`. Example: get all variables of a .env file with `/^\w+/gm` and replace them with `REACT_APP_$&`. (`replaceEnvForReactApp.js` file)
+
+- You can access expression groups easily with named groups:
+
+```js
+const phoneExp = /(?:(?<country_code>\+\d{2})\s)?\(?(?<area_code>\d{2})\)?\s?(\d{5})[\s-]?(\d{4})/g
+
+const result = phoneExp.exec('+5537991785049')
+console.log(result?.groups?.country_code) // +55
+console.log(result?.groups?.area_code) // 37
+```
