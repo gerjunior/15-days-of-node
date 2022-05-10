@@ -1,0 +1,16 @@
+{
+  "name": "11-advanced-error-handling",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "gerjunior",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "mongodb": "^4.5.0"
+  }
+}

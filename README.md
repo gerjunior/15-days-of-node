@@ -188,6 +188,8 @@ One more day practicing RegEx. Actually, I've been doing it for more days than I
 
 - regExp `exec` method is stateful, which means that the next time you run the same regExp it will not return the same result from before. To avoid this behavior, you can reset the `lastIndex` property of the RegExp object to `0`. In the `phoneNumber.js` file I made a Proxy object that will reset the `lastIndex` property of the RegExp object every time it is called.
 
+- Or you can just use `exp.test`.
+
 - On the `String.prototype.replace` function, you can use `$n` to replace the nth match of the expression. For example, if you want to replace the first match of the expression, you can use `$1`. If you want to replace the second match, you can use `$2`. If you want to replace using the whole expression, you can use `$&`. Example: get all variables of a .env file with `/^\w+/gm` and replace them with `REACT_APP_$&`. (`replaceEnvForReactApp.js` file)
 
 - You can access expression groups easily with named groups:
@@ -198,4 +200,31 @@ const phoneExp = /(?:(?<country_code>\+\d{2})\s)?\(?(?<area_code>\d{2})\)?\s?(\d
 const result = phoneExp.exec('+5537991785049')
 console.log(result?.groups?.country_code) // +55
 console.log(result?.groups?.area_code) // 37
+```
+
+## Day 11 - Advanced Error Handling NodeJS
+
+There are some precautions we need to take when handling some kind of errors on nodeJS. What happens when you throw inside a setTimeout? Will the try/catch block wrapping it be executed? What about a top-level await promise rejection?
+
+- if a promise is rejected and not handled inside another context (like setTimeout), or if it is rejected in the top-level of the application (without being awaited), it will be thrown as an unhandledRejection.
+
+- if a promise is rejected in a top-level await context, it will be throw as an uncaughtException.
+
+- you can handle unhandledRejection and uncaughtException errors using the `process` object.
+
+```js
+process.on('unhandledRejection', (err, cb);
+process.on('uncaughtException', (err, cb);
+```
+
+- You can use process events `SIGTERM` and `SIGINT` to configure graceful shutdowns (check [gracefulShutdown.js](./11-advanced-error-handling/gracefulShutdown.js)). Let's suppose you are running a mongodb instance in a http server. You want to gracefully shutdown the server when the current instance of the application needs to be closed because a new version is on air. To make this happen, you need to fulfill the following requirements:
+
+```txt
+- if a request is being made during the shutdown process, the server MUST deliver that response.
+
+- new requests will be redirected to the new version of the application.
+
+- requests that are made after the shutdown process to the closing server will be rejected.
+
+- after all the requests are finished, the server will be closed.
 ```
