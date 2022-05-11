@@ -228,3 +228,22 @@ process.on('uncaughtException', (err, cb);
 
 - after all the requests are finished, the server will be closed.
 ```
+
+## Day 12 - Advanced Error Handling NodeJS - Notification Pattern
+
+A common way to handle errors in REST apps is to throw it as soon as it happens. Although this is common, it is not the best way to do it. If you have a lot of errors, you'll probably throw them one by one, and the client will need to handle them one by one.
+A better approach is to use the notification pattern. This pattern makes sure you'll send all errors (here called "notifications") at once to the client. This is very similar from what `yup` does when you use the `abortEarly: false` option.
+
+```js
+this.notifications = [
+  'hero.name needs to be a string',
+  'hero.power needs to be a number',
+  'hero.power needs to be greater than 0',
+]
+```
+
+### Reads:
+
+- <https://martinfowler.com/articles/replaceThrowWithNotification.html>
+- <https://medium.com/tableless/n%C3%A3o-lance-exceptions-em-seu-dom%C3%ADnio-use-notifications-70b31f7148d3>
+- <https://martinfowler.com/eaaDev/Notification.html>
