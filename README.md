@@ -247,3 +247,29 @@ this.notifications = [
 - <https://martinfowler.com/articles/replaceThrowWithNotification.html>
 - <https://medium.com/tableless/n%C3%A3o-lance-exceptions-em-seu-dom%C3%ADnio-use-notifications-70b31f7148d3>
 - <https://martinfowler.com/eaaDev/Notification.html>
+
+## Day 12 - node:cluster
+
+If a NodeJS application is not containerized and needs to scale, the `node:cluster` module might be a good fit.
+It has been in NodeJS since version 0.10.x, and it is still maintained. It is a module that allows you to run multiple NodeJS processes in parallel using the concept of clusters, primary and worker nodes/processes (prev. master-slave).
+
+- The primary node is the "father" of the cluster. It can manage:
+  - The amount of workers that will be created;
+  - What will happen when a worker dies;
+  - Spawn new workers when necessary;
+  - Automatically makes load balancing between the workers;
+
+- A worker node:
+  - Is an instance of the application;
+  - Each worker run in a different process PID;
+  - Killing a worker not necessarily kills the nodeJS process (unless you want to kill the entire cluster);
+
+Today's project is to create a cluster of workers that will be running in parallel.
+
+- Workers will be "crashing" randomly (`Math.random * 10 seconds`);
+- the primary node will take care of spawning new instances of them as soon as it dies.
+- The workers will contain an HTTP server that will kill itself as soon as it receives a request.
+- The primary node should not restart a worker that exited without an error.
+- The number of workers is equivalent of the number of CPU cores of the host machine.
+
+Check [cluster.log](./13-cluster-server/cluster.log).
