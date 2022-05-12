@@ -1,0 +1,102 @@
+
+> 13@1.0.0 start
+> node clusterServer/clusterManagement.js
+
+Starting 8 processes...
+server listening on port 3000 and pid 12943
+server listening on port 3000 and pid 12944
+server listening on port 3000 and pid 12946
+server listening on port 3000 and pid 12950
+server listening on port 3000 and pid 12947
+server listening on port 3000 and pid 12948
+server listening on port 3000 and pid 12945
+server listening on port 3000 and pid 12949
+Worker 12943 died with code 1. Starting a new worker...
+Running 8 workers
+server listening on port 3000 and pid 12953
+Worker 12948 died with code 1. Starting a new worker...
+Running 8 workers
+server listening on port 3000 and pid 12969
+Worker 12949 died with code 1. Starting a new worker...
+Running 8 workers
+server listening on port 3000 and pid 12974
+Worker 12944 died with code 1. Starting a new worker...
+Running 8 workers
+server listening on port 3000 and pid 12975
+Worker 12950 died with code 1. Starting a new worker...
+Running 8 workers
+server listening on port 3000 and pid 12997
+HTTP request handled by PID 12946. Killing worker with exit code 0
+HTTP request handled by PID 12947. Killing worker with exit code 0
+Worker 12953 died with code 1. Starting a new worker...
+Running 6 workers
+server listening on port 3000 and pid 13006
+Worker 12969 died with code 1. Starting a new worker...
+Running 6 workers
+server listening on port 3000 and pid 13007
+Worker 12945 died with code 1. Starting a new worker...
+Running 6 workers
+HTTP request handled by PID 12974. Killing worker with exit code 0
+server listening on port 3000 and pid 13009
+Worker 12997 died with code 1. Starting a new worker...
+Running 5 workers
+server listening on port 3000 and pid 13013
+Worker 13013 died with code 1. Starting a new worker...
+Running 5 workers
+server listening on port 3000 and pid 13016
+Worker 13007 died with code 1. Starting a new worker...
+Running 5 workers
+server listening on port 3000 and pid 13017
+Worker 12975 died with code 1. Starting a new worker...
+Running 5 workers
+server listening on port 3000 and pid 13018
+Worker 13017 died with code 1. Starting a new worker...
+Running 5 workers
+server listening on port 3000 and pid 13022
+Worker 13006 died with code 1. Starting a new worker...
+Running 5 workers
+server listening on port 3000 and pid 13041
+Worker 13022 died with code 1. Starting a new worker...
+Running 5 workers
+server listening on port 3000 and pid 13042
+Worker 13009 died with code 1. Starting a new worker...
+Running 5 workers
+server listening on port 3000 and pid 13043
+Worker 13041 died with code 1. Starting a new worker...
+Running 5 workers
+server listening on port 3000 and pid 13044
+Worker 13044 died with code 1. Starting a new worker...
+Running 5 workers
+server listening on port 3000 and pid 13045
+Worker 13045 died with code 1. Starting a new worker...
+Running 5 workers
+server listening on port 3000 and pid 13046
+Worker 13018 died with code 1. Starting a new worker...
+Running 5 workers
+server listening on port 3000 and pid 13047
+Worker 13016 died with code 1. Starting a new worker...
+Running 5 workers
+server listening on port 3000 and pid 13048
+Worker 13042 died with code 1. Starting a new worker...
+Running 5 workers
+server listening on port 3000 and pid 13049
+Worker 13049 died with code 1. Starting a new worker...
+Running 5 workers
+server listening on port 3000 and pid 13050
+HTTP request handled by PID 13043. Killing worker with exit code 0
+HTTP request handled by PID 13046. Killing worker with exit code 0
+Worker 13048 died with code 1. Starting a new worker...
+Running 3 workers
+server listening on port 3000 and pid 13059
+HTTP request handled by PID 13047. Killing worker with exit code 0
+Worker 13059 died with code 1. Starting a new worker...
+Running 2 workers
+server listening on port 3000 and pid 13086
+Worker 13050 died with code 1. Starting a new worker...
+Running 2 workers
+server listening on port 3000 and pid 13088
+Worker 13088 died with code 1. Starting a new worker...
+Running 2 workers
+server listening on port 3000 and pid 13089
+HTTP request handled by PID 13086. Killing worker with exit code 0
+HTTP request handled by PID 13089. Killing worker with exit code 0
