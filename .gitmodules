@@ -1,3 +1,6 @@
 [submodule "02-jsexpert-week-05"]
 	path = 02-jsexpert-week-05-api
 	url = https://github.com/gerjunior/semana-javascript-expert05
+[submodule "15-ses-email-test"]
+	path = 15-ses-email-test
+	url = https://github.com/gerjunior/ses-email-test
