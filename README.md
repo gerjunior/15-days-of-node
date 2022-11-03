@@ -1,4 +1,4 @@
-# 100 days of node
+# 15 days of node
 
 This repository is meant to be my personal space to follow the #100daysOfCode challenge, but focused exclusively on nodeJS. The purpose is not to make a "project", but to keep track about the learning process with notes and links.
 I hope that by the end of the challenge I'll be able to recognize myself as an advanced JavaScript/NodeJS developer. I'll be able to make new projects without getting stuck on any advanced topics.
